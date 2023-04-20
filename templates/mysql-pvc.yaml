@@ -6,6 +6,7 @@ metadata:
   labels:
     {{- include "mysql.labels" . | nindent 4 }}
 spec:
+  storageClassName: {{ .Values.mysql.pvc.accessMode }}
   accessModes:
     - {{ .Values.mysql.pvc.accessMode }}
   resources:
