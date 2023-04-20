@@ -11,4 +11,4 @@ spec:
     - {{ .Values.mysql.pvc.accessMode }}
   resources:
     requests:
-      storage: {{ .Values.mysql.pvc.storage }}
+      storage: {{ .Values.mysql.pvc.storageClassName }}
